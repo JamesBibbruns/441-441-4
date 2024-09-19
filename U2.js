@@ -89,14 +89,6 @@ function clearCart() {
   updateCart(); // Refresh the cart display
 }
 
-
-
-
-
-
-
-
-
 // Define global variables
 var usernameCookieName = "username";
 var passwordCookieName = "password";
@@ -280,3 +272,9 @@ function redirectToRegister(event) {
 document.querySelector('.btns_more').addEventListener('click', function() {
     window.location.href = 'page7.html';
 });
+
+window.onload = function() {
+  if (window.location.href.includes('courseware')) {
+    checkCookie();
+  }
+};
